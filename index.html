@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="OSMS Market — MapleStory Classic market prices in one place.">
+  <title>OSMS Market</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./"><span class="brand-mark">M</span><span>OSMS <b>Market</b></span></a>
+    <span class="status-pill"><i></i> Community price tracker</span>
+  </header>
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">MAPLESTORY CLASSIC</p>
+        <h1>The market, <em>at a glance.</em></h1>
+        <p class="lede">Compare prices from the community’s favorite market trackers. Clean data, useful history, no shop-hopping required.</p>
+      </div>
+      <div class="hero-note"><span class="spark">✦</span><span>Sources are being connected<br><small>Fresh data will appear here soon.</small></span></div>
+    </section>
+    <section class="toolbar" aria-label="Market filters">
+      <label class="search"><span>⌕</span><input id="search" type="search" placeholder="Search an item…" autocomplete="off"></label>
+      <div class="filter-group" role="group" aria-label="Category"><button class="filter active" data-category="all">All items</button><button class="filter" data-category="scroll">Scrolls</button><button class="filter" data-category="equipment">Equipment</button><button class="filter" data-category="etc">Etc.</button></div>
+    </section>
+    <section class="overview" aria-label="Market overview">
+      <div class="stat"><span>Items tracked</span><strong id="item-count">—</strong></div>
+      <div class="stat"><span>Sources connected</span><strong id="source-count">0 <small>/ 2</small></strong></div>
+      <div class="stat"><span>Last update</span><strong id="last-update">—</strong></div>
+      <div class="stat accent"><span>Data status</span><strong><i></i> Building</strong></div>
+    </section>
+    <section class="section-head"><div><p class="eyebrow">PRICE BOARD</p><h2>Tracked items</h2></div><p id="result-count" class="muted"></p></section>
+    <div id="empty" class="empty"><div class="empty-icon">⌁</div><h3>Price feeds are being connected</h3><p>The OSMS Market dashboard is published. Once approved source endpoints are connected, prices and history will populate here automatically.</p><div class="source-links"><a href="https://cozy.markets/items" target="_blank" rel="noreferrer">Cozy Markets ↗</a><a href="https://meso.watch" target="_blank" rel="noreferrer">MesoWatch ↗</a></div></div>
+    <div id="table-wrap" class="table-wrap" hidden><table><thead><tr><th>Item</th><th>Category</th><th>Lowest</th><th>Median</th><th>Highest</th><th>Sources</th></tr></thead><tbody id="price-rows"></tbody></table></div>
+    <p class="fine-print">Prices are community-observed and may not represent completed sales. Always verify an item in-game. <span id="generated"></span></p>
+  </main>
+  <footer><span>OSMS Market</span><span>Built for MapleStory Classic</span><a href="https://github.com/dwlim/osms-market">GitHub ↗</a></footer>
+</body>
+</html>
